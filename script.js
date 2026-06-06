@@ -1,5 +1,5 @@
 // API Base URL - Change this when deploying the backend to production!
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://pro-sad-tinytts.hf.space/";
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("tts-form");
