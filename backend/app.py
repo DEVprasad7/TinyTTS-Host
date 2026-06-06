@@ -7,6 +7,7 @@ from enum import Enum
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Form, Depends, HTTPException, status, Security
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.security.api_key import APIKeyHeader
 from piper import PiperVoice
@@ -24,8 +25,9 @@ def get_api_key(api_key_header: str = Security(api_key_header)):
         status_code=status.HTTP_403_FORBIDDEN, detail="Could not validate credentials"
     )
 
+import tempfile
 MODELS_DIR = "models"
-TEMP_AUDIO_DIR = "temp_audio"
+TEMP_AUDIO_DIR = os.path.join(tempfile.gettempdir(), "tinytts_temp_audio")
 
 MODEL_PATHS = {
     "en": {
@@ -44,7 +46,7 @@ cleanup_task = None
 async def cleanup_loop():
     while True:
         try:
-            await asyncio.sleep(10) # Run every 10 seconds
+            await asyncio.sleep(45) # Run every 10 seconds
             now = time.time()
             if os.path.exists(TEMP_AUDIO_DIR):
                 for filename in os.listdir(TEMP_AUDIO_DIR):
@@ -89,6 +91,14 @@ async def lifespan(app: FastAPI):
             pass
 
 app = FastAPI(title="TinyTTS API", lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class Gender(str, Enum):
     male = "male"
