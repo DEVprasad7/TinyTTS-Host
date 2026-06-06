@@ -1,0 +1,27 @@
+# Virtual Environments
+backend/venv/
+venv/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Ignore the frontend since we only need to host the backend
+frontend/
+
+# Ignore local audio files
+backend/temp_audio/
+temp_audio/
+*.wav
+
+# Ignore Git files
+.git/
+.gitignore
