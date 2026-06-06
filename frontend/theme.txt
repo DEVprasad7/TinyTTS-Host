@@ -1,0 +1,81 @@
+Neo-Brutalist Frontend Theme & Layout
+
+Design a modern Neo-Brutalist website using only HTML, CSS, and JavaScript. The interface should feel bold, raw, playful, and highly interactive while maintaining excellent usability.
+
+Visual Style
+Neo-Brutalism aesthetic with thick 4px black borders.
+Hard offset shadows (6px 6px 0px #000000) with no blur.
+Sharp corners (0px border-radius).
+Bright, high-contrast color palette:
+Background: #FFF8E7 (warm cream)
+Primary: #FFDE59 (yellow)
+Secondary: #FF5A5F (coral red)
+Accent: #4D96FF (blue)
+Success: #6BCB77 (green)
+Text: #000000
+No gradients, glassmorphism, or neumorphism.
+Oversized bold typography using Space Grotesk, Inter, or IBM Plex Sans.
+Large headings with strong visual hierarchy.
+Slightly rotated decorative cards and stickers for personality.
+Hand-drawn doodles, arrows, and geometric shapes as decorative elements.
+Layout Structure
+Navigation Bar
+Sticky navigation with thick border.
+Logo on left.
+Navigation links centered.
+CTA button on right.
+Hover effect: button lifts upward with stronger shadow.
+Hero Section
+Massive bold headline.
+Supporting description.
+Two CTA buttons.
+Large illustration or product mockup.
+Floating Neo-Brutalist badges showing stats, achievements, or key features.
+Asymmetrical layout with overlapping elements.
+Features Section
+Responsive 3-column card grid.
+Feature cards with thick borders and hard shadows.
+Hover effect: cards move diagonally and shadows shift.
+Each card contains icon, title, and short description.
+Statistics Section
+Large metric cards.
+Animated counters.
+Bright background blocks with contrasting colors.
+Slight card rotations for visual energy.
+Showcase / Projects Section
+Masonry or Bento-style grid.
+Interactive project cards.
+Hover reveals additional details.
+Strong black borders around every project.
+Testimonials Section
+Speech-bubble inspired cards.
+Profile image, name, role, and quote.
+Horizontal scrolling animation on larger screens.
+Call-To-Action Section
+Full-width attention-grabbing banner.
+Large text.
+Contrasting background color.
+Prominent action button.
+Footer
+Multi-column footer.
+Social links.
+Quick navigation.
+Copyright information.
+Interactions
+Smooth but snappy animations.
+Hover transforms:
+translate(-4px, -4px)
+shadow increases
+Buttons feel tactile and physical.
+Cards slightly bounce on hover.
+Custom cursor effects.
+Scroll-triggered reveal animations.
+Floating decorative shapes with subtle motion.
+Responsive Design
+Mobile-first approach.
+Stack sections vertically on small screens.
+Preserve Neo-Brutalist appearance on all devices.
+Touch-friendly buttons and navigation.
+Overall Feeling
+
+Create a website that feels rebellious, energetic, creative, and memorable. Every component should look like a physical cutout placed on the page with bold borders, loud colors, oversized typography, hard shadows, and playful interactions while remaining professional and easy to navigate.
