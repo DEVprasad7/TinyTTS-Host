@@ -92,9 +92,11 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="TinyTTS API", lifespan=lifespan)
 
+origin_url = os.getenv("ORIGIN_URL", "http://127.0.0.1:8000")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[origin_url],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
