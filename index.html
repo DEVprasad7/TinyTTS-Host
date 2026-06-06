@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyTTS - The Neo-Brutalist Text-to-Speech Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TinyTTS</div>
+        <div class="nav-links">
+            <a href="#app">Generate</a>
+            <a href="https://github.com/DEVprasad7/TinyTTS-Host" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">Neo-Brutalism Edition</div>
+            <h1>Make It Talk.<br>Loudly.</h1>
+            <p>A fast, raw, and playful text-to-speech engine powered by Piper. No nonsense, just pure synthesis.</p>
+            <a href="#app" class="btn btn-primary">Start Generating</a>
+        </div>
+    </header>
+
+    <main id="app" class="app-section">
+        <div class="card app-card">
+            <h2>Synthesis Deck</h2>
+            
+            <form id="tts-form">
+                <div class="form-group">
+                    <label for="api-key">API Key (Required)</label>
+                    <input type="password" id="api-key" placeholder="Enter your TINYTTS_API_KEY" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="text-input">What should I say?</label>
+                    <textarea id="text-input" rows="4" placeholder="Type something brilliant..." required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="language-select">Language</label>
+                        <select id="language-select" required>
+                            <option value="en" selected>English</option>
+                            <option value="hi">Hindi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group half-width">
+                        <label for="gender-select">Gender</label>
+                        <select id="gender-select" required>
+                            <option value="female" selected>Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-secondary btn-block" id="submit-btn">Synthesize Now</button>
+            </form>
+
+            <div id="result-container" class="result-container hidden">
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Brewing soundwaves...</p>
+                </div>
+                
+                <div id="audio-output" class="audio-output hidden">
+                    <h3>Audio Ready</h3>
+                    <audio id="audio-player" controls></audio>
+                    <a id="download-btn" class="btn btn-success" download>Download WAV</a>
+                </div>
+                
+                <div id="error-message" class="error-message hidden">
+                    <p id="error-text"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 TinyTTS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
